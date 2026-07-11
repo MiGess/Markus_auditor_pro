@@ -1,66 +1,90 @@
-body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            height: 100vh; /* Ocupa el 100% del alto de la pantalla */
-            background-color: #f4f7f6;
-        }
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+}
+nav {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+.menu-principal {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-item {
+    margin: 0 15px;
+}
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.sub-menu li a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+}
+.sub-menu li a:hover {
+    background-color: #e0e0e0;
+}
+.menu-item.activo .sub-menu {
+    display: block;
+}
+   
 
-        /* --- ESTILOS DEL MENÚ LATERAL --- */
-.sidebar {
-            width: 250px;
-            background-color: #2c3e50;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            transition: width 0.3s ease; /* Animación suave al colapsar */
-            overflow: hidden; /* Oculta el texto que se sale al colapsar */
-        }
-
-        /* Clase que se aplica con JavaScript para achicar el menú */
-.sidebar.collapsed {
-            width: 60px;
-        }
-
-        /* Botón de hamburguesa */
-.toggle-btn {
-        background-color: #1a252f;
-            color: white;
-            border: none;
-            padding: 15px;
-            font-size: 1.5rem;
-            text-align: left;
-            cursor: pointer;
-        }
-
-.toggle-btn:hover {
-            background-color: #11181f;
-        }
-
-        /* Lista de opciones del menú */
-.menu-items {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-.menu-items li {
-            padding: 15px 20px;
-            border-bottom: 1px solid #34495e;
-            cursor: pointer;
-            white-space: nowrap; /* Evita que el texto salte de línea */
-        }
-
-.menu-items li:hover {
-            background-color: #34495e;
-            border-left: 4px solid #3498db; /* Detalle visual al pasar el mouse */
-            padding-left: 16px; /* Ajuste para compensar el borde */
-        }
-
-        /* --- ESTILOS DEL CONTENIDO PRINCIPAL --- */
-.main-content {
-            flex-grow: 1; /* Ocupa todo el espacio restante a la derecha */
-            padding: 30px;
-        }       
+.seccion-auditoria {
+    max-width: 950px;
+    width: 10%;
+    margin: 50px auto;
+    padding:  30px;    
+}
+.titulo-pantalla{
+    text-align: center;
+    color: rgb(150, 161, 223);
+    margin-bottom: 10px;
+}
+.contenedor-opciones {
+    text-align: center;
+    display: flex;
+    gap: 25px;
+}
+.tarjeta-paso{
+    text-align: center;
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.03s ease;
+}
+.tarjeta-paso:hover {
+    text-align: center;
+    transform: translateY(-5px);
+    border-color:#333;
+    cursor: pointer;
+}
+.tarjeta-paso h3{
+    text-align: center;
+    color:#333;
+    margin-top: 0;
+}
+.tarjeta-paso p{
+    text-align: center;
+color:  #333;
+line-height: 1.5;
+}
