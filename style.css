@@ -4,16 +4,40 @@ body {
     min-height: 100vh;
 
     /* Ruta de tu GIF o imagen animada */
-    background-image: url('/home/miigess/Markus_auditor_pro-1/fondos/wallpapers-1.jpg'); 
+    background-image: url('fondos/wallpapers-6.jpg'); 
 
     /* Ajustes para que la imagen cubra toda la pantalla y no se repita */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Hace que el fondo se quede fijo al hacer scroll */
+    background-color: rgba(0, 0, 0, 0.5); /* 0.5 es la opacidad (50%) */
 }
 
-
+.banner{
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor de alpha (0.5) para hacer el fondo más claro u oscuro */
+    padding: 30px;
+    text-align: center;
+    color: #0e0f0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.logo {
+  width: 75px;
+  height: auto;
+  margin-left: 10px;
+  padding: -10px;
+  display: flex;
+  margin-left: auto; 
+}
+.titulo-banner{
+    text-align: center;
+    color: #f4efef;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+}   
 h1 {
     text-align: center;
     color: #333;
@@ -38,7 +62,11 @@ nav {
     justify-content: space-around;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 10px 20px;
 }
 .menu-item {
     margin: 0 15px;
