@@ -1,8 +1,29 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+
+    /* Ruta de tu GIF o imagen animada */
+    background-image: url('/home/miigess/Markus_auditor_pro-1/fondos/wallpapers-1.jpg'); 
+
+    /* Ajustes para que la imagen cubra toda la pantalla y no se repita */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Hace que el fondo se quede fijo al hacer scroll */
+}
+
+
 h1 {
     text-align: center;
     color: #333;
     font-family: 'Arial', sans-serif;
     margin-top: 20px;
+    text-decoration: none;
+}
+h1 a {
+    text-decoration: none;
+    color: inherit;
 }
 nav {
     max-width: 800px;
@@ -87,4 +108,16 @@ nav {
     text-align: center;
 color:  #333;
 line-height: 1.5;
+}
+.boton {
+  background-color: #007bff; /* Color de fondo */
+  color: white;              /* Color del texto */
+  padding: 10px 20px;        /* Espaciado interno */
+  text-decoration: none;     /* Quita el subrayado del enlace */
+  border-radius: 5px;        /* Bordes redondeados */
+  display: inline-block;     /* Para que respete el padding y margin */
+}
+
+.boton:hover {
+  background-color: #0056b3; /* Color cuando pasas el ratón por encima */
 }
