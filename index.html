@@ -11,57 +11,24 @@
     <h1 class="titulo-banner"><a href="index.html">Markus Auditor Pro</h1>
     <img class="logo" src="logo/logo.png">
 </div>
-<nav>
     <ul class="menu-principal">
-        <li class="menu-item">
-            <!-- From Uiverse.io by barisdogansutcu --> 
-            <button>
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg> 
-              <a href="nueva-auditoria.html">Auditoria</a>
-            </button>
+        <li class="menu-item"><a href="#">Auditoria</a>
             <ul class="sub-menu">
-                <a href="nueva-auditoria.html" class="boton">Nueva auditoria</a>
+                <li><a href="nueva-auditoria.html">Nueva auditoria</a></li>
             </ul>
         </li>
-
-        <li class="menu-item">
-            <button>
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg> 
-              <a href="consultas.html">Consultas</a>
-            </button>
+        <li class="menu-item"><a href="#">Consultas</a>
             <ul class="sub-menu">
-                <li><a href="#">Id Verificados</a></li>
+                <li><a href="#">Historial de auditorias</a></li>
                 <li><a href="#">Generar Reporte</a></li>
             </ul>
         </li>
     </ul>
+<nav class="contenedor-botones">
+<h3 class="bienvenido">Bienvenido Miguel vargas <p>Que quieres hacer hoy</h3>
+
 </nav>
-<script>
-  // Buscamos todos los elementos del menú principal
-  const itemsMenu = document.querySelectorAll('.menu-item');
 
-  // Escuchamos cuando el usuario hace clic en alguno de ellos
-  itemsMenu.forEach(item => {
-    item.addEventListener('click', function(e) {
-      // Si el clic se realiza dentro de un submenú, dejamos que el navegador siga el enlace
-      if (e.target.closest('.sub-menu')) {
-        return;
-      }
-
-      // Evitamos que la página se recargue al hacer clic
-      e.preventDefault(); 
-      
-      // Si haces clic en uno, quitamos la clase 'activo' de los demás (para cerrar otros menús)
-      itemsMenu.forEach(otroItem => {
-        if (otroItem !== item) otroItem.classList.remove('activo');
-      });
-
-      // Ponemos o quitamos la clase 'activo' en el menú donde se hizo clic
-      this.classList.toggle('activo');
-    });
-  });
-</script>
 </body>
 </html>
+        

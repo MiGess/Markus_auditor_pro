@@ -10,62 +10,65 @@
     <h1 class="titulo-banner"><a href="index.html">Markus Auditor Pro</h1>
     <img class="logo" src="logo/logo.png">
 </div>
-    <nav class="menu-principal">
+
     <ul class="menu-principal">
         <li class="menu-item">
-            <a href="#">Auditoria</a>
+            <button>
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg> 
+              <a href="#">Auditoria</a>
+            </button>
             <ul class="sub-menu">
-                <li><a href="nueva-auditoria.html" class="boton">Nueva auditoria</a></li>
+              <button>
+                <a href="nueva-auditoria.html" class="button">Nueva auditoria</a>
+              </button>
             </ul>
         </li>
 
         <li class="menu-item">
-            <a href="index.html">Consultas</a>
+            <button>
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg> 
+              <a href="consultas.html">Consultas</a>
+            </button>
             <ul class="sub-menu">
                 <li><a href="#">Id Verificados</a></li>
                 <li><a href="#">Generar Reporte</a></li>
             </ul>
         </li>
     </ul>
-</nav>
-<script>
-  // Buscamos todos los elementos del menú principal
-  const itemsMenu = document.querySelectorAll('.menu-item');
 
-  // Escuchamos cuando el usuario hace clic en alguno de ellos
-  itemsMenu.forEach(item => {
-    item.addEventListener('click', function(e) {
-      // Si el clic se realiza dentro de un submenú, dejamos que el navegador siga el enlace
-      if (e.target.closest('.sub-menu')) {
-        return;
-      }
-
-      // Evitamos que la página se recargue al hacer clic
-      e.preventDefault(); 
-      
-      // Si haces clic en uno, quitamos la clase 'activo' de los demás (para cerrar otros menús)
-      itemsMenu.forEach(otroItem => {
-        if (otroItem !== item) otroItem.classList.remove('activo');
-      });
-
-      // Ponemos o quitamos la clase 'activo' en el menú donde se hizo clic
-      this.classList.toggle('activo');
-    });
-  });
-</script>
 <main class="seleccion-auditoria"></main>
-    <h2 class="titulo-pantalla">Nueva Auditoría</h2>
+    <nav><h2 class="titulo-pantalla">Nueva Auditoría</h2>
     <div class="contenedor-opciones"> 
         <section class="tarjeta-paso">
-        <h3> Por Fecha </h3>
+        <h3> Realizar por fecha de Visita </h3>
+        <p> Seleccione un rango de fechas </p>
+        <input type="date" name="fecha-inicio" id="fecha-inicio">
+        <input type="date" name="fecha-fin" id="fecha-fin">
+        <p>
+        <button>Buscar </button>
     </div>
     <div>
         <section class="tarjeta-paso">
-        <h3> Por Id </h3>
+        <h3> Realizar por Inspector </h3>
+        <p> Seleccione un inspector </p>
+        <select class="inspector" name="inspector" id="inspector">
+            <option value="inspector1">Inspector 1</option>
+            <option value="inspector2">Inspector 2</option>
+            <option value="inspector3">Inspector 3</option>
+            <option value="inspector4">Inspector 4</option>
+        </select>
+        <p>
+        <button> Seleccionar </button>
     </div>
     <div>
         <section class="tarjeta-paso">
-        <h3> Por inspector </h3>
+        <h3> Realizar por id de linea </h3>
+        <p> Ingrese un id de linea </p>
+        <input type="text" name="id-linea" id="id-linea">
+        <p>
+        <button>Buscar </button>
     </div>
-
+</nav>
 </html> 
