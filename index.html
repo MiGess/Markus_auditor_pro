@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,19 +12,28 @@
     <h1 class="titulo-banner"><a href="index.html">Markus Auditor Pro</h1>
     <img class="logo" src="logo/logo.png">
 </div>
-    <ul class="menu-principal">
-        <li class="menu-item"><a href="#">Auditoria</a>
-            <ul class="sub-menu">
-                <li><a href="nueva-auditoria.html">Nueva auditoria</a></li>
-            </ul>
-        </li>
-        <li class="menu-item"><a href="#">Consultas</a>
-            <ul class="sub-menu">
-                <li><a href="#">Historial de auditorias</a></li>
-                <li><a href="#">Generar Reporte</a></li>
-            </ul>
-        </li>
+<nav class="navigation">
+    <ul>
+        <li><a><span class="icon"><i class="fa-solid fa-house"></i></span><span
+              class="title">Auditoria por Fecha</span></a></li>
+        <li><a><span class="icon"><i class="fa-solid fa-chart-pie"></i></span><span
+              class="title">Auditoria por ID</span></a></li>
+        <li><a><span class="icon"><i class="fa-solid fa-layer-group"></i></span><span
+              class="title">Auditoria por Inspector</span></a></li>
+        <li><a><span class="icon"><i class="fa-solid fa-wallet"></i></span><span
+              class="title">Historial</span></a></li>
+        <li><a><span class="icon"><i class="fa-solid fa-gear"></i></span><span
+              class="title">Generar Reporte</span></a></li>
     </ul>
+
+    <div class="user-box">
+        <div class="user-img">MV</div>
+        <div class="user-details">
+          <p>Miguel Angel vargas</p>
+          <span>Director Tecnico</span>
+        </div>
+    </div>  
+</nav>
 <nav class="contenedor-botones">
 <h3 class="bienvenido">Bienvenido Miguel vargas <p>Que quieres hacer hoy</h3>
 
@@ -31,4 +41,3 @@
 
 </body>
 </html>
-        
