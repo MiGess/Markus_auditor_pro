@@ -1,43 +1,77 @@
 <!DOCTYPE html> 
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Markus Auditor Pro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="banner">
-    <h1 class="titulo-banner"><a href="index.html">Markus Auditor Pro</h1>
-    <img class="logo" src="logo/logo.png">
+
+    <header class="banner">
+        <h1 class="titulo-banner"><a href="index.html">Markus Auditor Pro</a></h1>
+        <img class="logo" src="logo/logo.png" alt="Logo Markus Auditor Pro">
+    </header>
+
+    <nav class="navigation">
+        <ul>
+            <li>
+                <a href="fecha.html">
+                    <span class="icon"><i class="fa-solid fa-house"></i></span>
+                    <span class="title">Auditoría por Fecha</span>
+                </a>
+            </li>
+            <li>
+                <a href="#auditoria-id">
+                    <span class="icon"><i class="fa-solid fa-chart-pie"></i></span>
+                    <span class="title">Auditoría por ID</span>
+                </a>
+            </li>
+            <li>
+                <a href="#auditoria-inspector">
+                    <span class="icon"><i class="fa-solid fa-layer-group"></i></span>
+                    <span class="title">Auditoría por Inspector</span>
+                </a>
+            </li>
+            <li>
+                <a href="#historial">
+                    <span class="icon"><i class="fa-solid fa-wallet"></i></span>
+                    <span class="title">Historial</span>
+                </a>
+            </li>
+            <li>
+                <a href="#reportes">
+                    <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                    <span class="title">Generar Reporte</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="user-box">
+            <div class="user-img">MV</div>
+            <div class="user-details">
+                <p>Miguel Ángel Vargas</p>
+                <span>Director Técnico</span>
+            </div>
+        </div>  
+    </nav>
+
+    <main class="contenedor-botones">
+
+<div class="card">
+  <div class="card__content">
+    <div class="hover-text"><h3 class="bienvenido">Bienvenido Miguel Vargas<p>¿Qué quieres hacer hoy?</p></h3></div>
+  </div>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="blob blob4"></div>
 </div>
-<nav class="navigation">
-    <ul>
-        <li><a><span class="icon"><i class="fa-solid fa-house"></i></span><span
-              class="title">Auditoria por Fecha</span></a></li>
-        <li><a><span class="icon"><i class="fa-solid fa-chart-pie"></i></span><span
-              class="title">Auditoria por ID</span></a></li>
-        <li><a><span class="icon"><i class="fa-solid fa-layer-group"></i></span><span
-              class="title">Auditoria por Inspector</span></a></li>
-        <li><a><span class="icon"><i class="fa-solid fa-wallet"></i></span><span
-              class="title">Historial</span></a></li>
-        <li><a><span class="icon"><i class="fa-solid fa-gear"></i></span><span
-              class="title">Generar Reporte</span></a></li>
-    </ul>
 
-    <div class="user-box">
-        <div class="user-img">MV</div>
-        <div class="user-details">
-          <p>Miguel Angel vargas</p>
-          <span>Director Tecnico</span>
+        
         </div>
-    </div>  
-</nav>
-<nav class="contenedor-botones">
-<h3 class="bienvenido">Bienvenido Miguel vargas <p>Que quieres hacer hoy</h3>
-
-</nav>
+    </main>
 
 </body>
 </html>

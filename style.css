@@ -25,7 +25,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* 0.5 es la opacidad (50%) */
 }
 
-.banner{
+.header{
     background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor de alpha (0.5) para hacer el fondo más claro u oscuro */
     padding: 30px;
     text-align: center;
@@ -36,15 +36,18 @@ body {
 }
 
 .logo {
-  width: 75px;
+  width:100px;
   height: auto;
-  margin-left: 10px;
   display: flex;
-  margin-left: auto; 
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .titulo-banner{
     text-align: center;
+    height: auto;
     color: #f4efef;
     font-family: 'Arial', sans-serif;
     margin-top: 20px;
@@ -63,14 +66,15 @@ h1 a {
     color: inherit;
 }
 
-/.contenedor-botones {
+.contenedor-botones {
     max-width: 500px;
     margin: 30px auto;
-    background-color: #4d8eac72;
-    border: 1px solid #a38cd8;
     border-radius: 10px;
     padding: 5px;
     text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);`
 }
 
 .my-button {
@@ -117,7 +121,7 @@ a {
     text-decoration: none;
 }
 
-/*.sub-menu {
+.sub-menu {
     display: none;
     position: absolute;
     background-color: #f8f8f8;
@@ -128,7 +132,7 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Muestra el submenú cuando el cursor está sobre el elemento padre 
+Muestra el submenú cuando el cursor está sobre el elemento padre 
 .menu-item:hover > .sub-menu {
     display: block;
 }
@@ -146,46 +150,73 @@ a {
     margin-bottom: 10px;
 }
 
-
 .tarjeta-paso{
     text-align: center;
     flex: 15;
-    background-color: #fff;
-    border: 1px solid #591010;
-    border-radius: 10px;
-    padding: 30px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, border-color 0.03s ease;
-    margin-left: 2%;
-    margin-right: 2%;
-}
-
-.tarjeta-paso:hover {
-    text-align: center;
-    transform: translateY(-5px);
-    border-color: #333;
-    cursor: pointer;
+    padding: 50px;   
 }
 
 .tarjeta-paso h3{
     text-align: center;
-    color: #333;
     margin-top: 0px;
 }
 
-.boton {red
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
+/* From Uiverse.io by gharsh11032000 */ 
+.animated-button {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffff40;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.boton:hover {
-  background-color: #0056b3;
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #d7dee4;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
 }
-*/
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #1b1919;
+}
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.animated-button:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+
+
+
+
 .bienvenido{
     text-align: center;
     color: #fff;
