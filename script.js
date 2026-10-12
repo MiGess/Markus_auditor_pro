@@ -1,24 +1,20 @@
-// Buscamos todos los elementos del menú principal
-const itemsMenu = document.querySelectorAll('.menu-item');
+const btnIniciar  = document.getElementById("btn__iniciar-sesion");
+const btnRegistrar = document.getElementById("btn__registrarse");
 
-// Escuchamos cuando el usuario hace clic en alguno de ellos
-itemsMenu.forEach(item => {
-  item.addEventListener('click', function(e) {
-    // Si el clic se realiza dentro de un submenú, dejamos que el navegador siga el enlace
-    if (e.target.closest('.sub-menu')) {
-      return;
-    }
+const contenedor = document.querySelector(".contenedor__todo");
+const cajaLogin    = document.querySelector(".caja__trasera-login");
+const cajaRegister = document.querySelector(".caja__trasera-register");
 
-    // Evitamos que la página se recargue al hacer clic en el menú principal
-    e.preventDefault(); 
-    
-    // Si haces clic en uno, quitamos la clase 'activo' de los demás (para cerrar otros menús)
-    itemsMenu.forEach(otroItem => {
-      if (otroItem !== item) otroItem.classList.remove('activo');
-    });
+btnIniciar.addEventListener("click", () => {
+    contenedor.classList.remove("modo-registro");
 
-    // Ponemos o quitamos la clase 'activo' en el menú donde se hizo clic
-    this.classList.toggle('activo');
-  });
+    cajaLogin.style.opacity = "0";
+    cajaRegister.style.opacity = "1";
 });
-    
+
+btnRegistrar.addEventListener("click", () => {
+    contenedor.classList.add("modo-registro");
+
+    cajaLogin.style.opacity = "1";
+    cajaRegister.style.opacity = "0";
+});
